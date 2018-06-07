@@ -56,7 +56,7 @@ $(document).ready(function () {
  }
  $("main").on("click", "article", function () {
   var id = $(this).attr("data-key");
-  alert(id);
+  mainVid(id);
 
  });
 
