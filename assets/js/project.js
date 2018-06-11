@@ -15,11 +15,10 @@ $(document).ready(function () {
 
  function loadVids() {
   $.getJSON(URL, options, function (data) {
-   console.log(data);
    var id = data.items[0].snippet.resourceId.videoId;
    mainVid(id);
    resultsLoop(data);
-  })
+  });
  }
 
  function mainVid(id) {
@@ -48,12 +47,13 @@ $(document).ready(function () {
      <p>${desc}</p>
     </div>
    </article>
-
   `);
-
-
   });
  }
+
+
+ // CLICK EVENT
+
  $("main").on("click", "article", function () {
   var id = $(this).attr("data-key");
   mainVid(id);
